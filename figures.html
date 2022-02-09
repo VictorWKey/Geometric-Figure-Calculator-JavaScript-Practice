@@ -8,63 +8,60 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Ubuntu:wght@300;500;700&display=swap" rel="stylesheet">
-    <style src="./figures.css">
-        body{
-            font-family: 'Quicksand', sans-serif;
-            margin: 0;
-        }
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="figures.css">
 </head>
 <body>
-    <header>
-        <h1>Geometric Figures</h1>
-        <p>This is a project of JavaScript Course</p>
-    </header>
-    <section class="square-container">
-        <h2>Calculate the area and perimeter of a square</h2>
-        <form action="">
-            <label for="inputSquare">Side measurement</label>
-            <input type="number" id="inputSquare">
-
-            <button type="button" onclick="calculateSquarePerimeter()">Calculate Perimeter</button>
-
-            <button type="button" onclick="calculateSquareArea()">Calculate Area</button>
-        </form>
-    </section>
-
-    <section class="triangle-container">
-        <h2>Calculate the area and perimeter of a triangle</h2>
-        <form action="">
-            <label for="inputTriangle">Side measurement</label>
-            <input type="number" id="inputTriangleSide1">
-
-            <label for="inputTriangle">Side 2 measurement</label>
-            <input type="number" id="inputTriangleSide2">
-
-            <label for="inputTriangle">Base measurement</label>
-            <input type="number" id="inputTriangleBase">
-
-            <label for="inputTriangle">Height measurement</label>
-            <input type="number" id="inputTriangleHeight">
-
-            <button type="button" onclick="calculateTrianglePerimeter()">Calculate Perimeter</button>
-
-            <button type="button" onclick="calculateTriangleArea()">Calculate Area</button>
-        </form>
-    </section>
-
-    <section class="circle-container">
-        <h2>Calculate the area and perimeter of a circle</h2>
-        <form action="">
-            <label for="inputCircle">Radius measurement</label>
-            <input type="number" id="inputCircle">
-
-            <button type="button" onclick="calculateCirclePerimeter()">Calculate Perimeter</button>
-
-            <button type="button" onclick="calculateCircleArea()">Calculate Area</button>
-        </form>
-    </section>
+    <div class = "main-container">
+        <header>
+            <h1 class="title">Geometric Figures</h1>
+            <p>This is a project of JavaScript Course</p>
+            <p>Calculate the area and perimeter of a square, triangle or circle</p>
+        </header>
+        <section class="figure-container square-container">
+            <h2>Square</h2>
+            <form class = "form">
+                <label for="inputSquare">Side size</label>
+                <input type="number" class="input" id="inputSquare">
+    
+                <button type="button" class = "button-square" onclick="calculateSquarePerimeter()">Calculate Perimeter</button>
+    
+                <button type="button" class = "button-square" onclick="calculateSquareArea()">Calculate Area</button>
+            </form>
+        </section>
+    
+        <section class="figure-container triangle-container">
+            <h2>Triangle</h2>
+            <form class = "form">
+                <label for="inputTriangleSide1">Side size (1)</label>
+                <input type="number" class="input" id="inputTriangleSide1">
+    
+                <label for="inputTriangleSide2">Side size (2)</label>
+                <input type="number" class="input" id="inputTriangleSide2">
+    
+                <label for="inputTriangleBase">Base size</label>
+                <input type="number" class="input" id="inputTriangleBase">
+    
+                <label for="inputTriangleHeight">Height size</label>
+                <input type="number" class="input" id="inputTriangleHeight">
+    
+                <button type="button" class = "button-triangle" onclick="calculateTrianglePerimeter()">Calculate Perimeter</button>
+    
+                <button type="button" class = "button-triangle" onclick="calculateTriangleArea()">Calculate Area</button>
+            </form>
+        </section>
+    
+        <section class="figure-container circle-container">
+            <h2>Circle</h2>
+            <form class = "form">
+                <label for="inputCircle">Radius size</label>
+                <input type="number" id="inputCircle" class="input">
+    
+                <button type="button" class = "button-circle" onclick="calculateCirclePerimeter()">Calculate Perimeter</button>
+    
+                <button type="button" class = "button-circle" onclick="calculateCircleArea()">Calculate Area</button>
+            </form>
+        </section>
+    </div>
     
     <script src="./figures.js"></script>
 </body>
