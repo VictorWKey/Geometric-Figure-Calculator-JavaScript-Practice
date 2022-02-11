@@ -10,6 +10,20 @@ function squareArea (side){
 
 //Triangle code
 
+function triangleHeight(side1, side2, base){
+    if(side1 === side2 && side1 != base){
+        return Math.sqrt((side1 * side2) - ((base / 2) * (base / 2)));         
+    }
+    else{
+        alert("This is not an isoceles triangle");
+    }
+}
+
+
+triangleHeight(8, 8, 4);
+
+
+
 function trianglePerimeter(side1, side2, base){
     return parseFloat(side1) + parseFloat(side2) + parseFloat(base);
 }
@@ -63,7 +77,7 @@ function calculateSquareArea(){
 function calculateTrianglePerimeter(){
     const input1 = document.getElementById("inputTriangleSide1");
     const side1 = input1.value;
-    const input2 = document.getElementById("inputTriangleSide2")
+    const input2 = document.getElementById("inputTriangleSide2");
     const side2 = input2.value;
     const input3 = document.getElementById("inputTriangleBase")
     const base = input3.value;
@@ -74,14 +88,23 @@ function calculateTrianglePerimeter(){
 }
 
 function calculateTriangleArea(){
-    const input4 = document.getElementById("inputTriangleHeight")
-    const height = input4.value;
+
+    const input1 = document.getElementById("inputTriangleSide1");
+    const side1 = input1.value;
+
+    const input2 = document.getElementById("inputTriangleSide2");
+    const side2 = input2.value;
 
     const input3 = document.getElementById("inputTriangleBase")
     const base = input3.value;
-    const area= triangleArea(base, height).toFixed(2);
 
-    alert(area);
+    const height = triangleHeight(side1, side2, base);
+
+    const area= triangleArea(base, height).toFixed(2);
+  
+    if(area > 0){
+        alert(area);
+    }
 }
 
 //Circle interaction
